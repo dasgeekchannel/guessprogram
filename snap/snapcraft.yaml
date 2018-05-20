@@ -1,0 +1,19 @@
+name: number-guess
+version: git
+summary: number-guess
+description: |
+  python3 number guessing game
+
+grade: devel
+confinement: devmode
+
+apps:
+  number-guess:
+    command: bin/number-guess
+
+parts:
+  number-guess:
+    source: https://github.com/ul7r41337h4x0r/guessprogram
+    plugin: python
+    python-version: python3
+
