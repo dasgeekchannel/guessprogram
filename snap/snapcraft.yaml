@@ -4,8 +4,8 @@ summary: number-guess
 description: |
   python3 number guessing game
 
-grade: devel
-confinement: devmode
+grade: stable
+confinement: strict
 
 apps:
   number-guess:
