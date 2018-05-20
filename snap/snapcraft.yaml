@@ -9,7 +9,7 @@ confinement: devmode
 
 apps:
   number-guess:
-    command: number-guess
+    command: python3 $SNAP/bin/number-guess.py
 
 parts:
   number-guess:
