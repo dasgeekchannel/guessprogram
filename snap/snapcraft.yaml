@@ -13,7 +13,7 @@ apps:
 
 parts:
   number-guess:
-    source: https://github.com/ul7r41337h4x0r/guessprogram
+    source: https://github.com/dasgeekchannel/guessprogram
     source-type: git
     plugin: python
     python-version: python3
