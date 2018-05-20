@@ -17,4 +17,7 @@ parts:
     source-type: git
     plugin: python
     python-version: python3
-
+  publish:
+    plugin: copy
+    files:
+      ./number-guess.py: bin/number-guess.py
