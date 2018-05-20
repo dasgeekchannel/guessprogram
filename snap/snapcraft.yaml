@@ -9,7 +9,7 @@ confinement: devmode
 
 apps:
   number-guess:
-    command: bin/number-guess
+    command: number-guess
 
 parts:
   number-guess:
