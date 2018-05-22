@@ -1,11 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"crypto/rand"
+	"fmt"
 	"math/big"
-	"strconv"
 	"os"
+	"strconv"
 )
 
 func randomNumber() int64 {
@@ -15,7 +15,7 @@ func randomNumber() int64 {
 }
 
 func intro() {
-    fmt.Println("------------------------------------")
+	fmt.Println("------------------------------------")
 	fmt.Println("       Guess The Number Game        ")
 	fmt.Println("------------------------------------")
 	fmt.Println("Guess a number between 0 and 100:")
@@ -24,7 +24,7 @@ func intro() {
 func userInput() int64 {
 	var input string
 	fmt.Scanln(&input)
-	inputInt ,_ := strconv.Atoi(input)
+	inputInt, _ := strconv.Atoi(input)
 	inputInt64 := int64(inputInt)
 	return inputInt64
 }
@@ -32,7 +32,7 @@ func userInput() int64 {
 func main() {
 	intro()
 	theNumber := randomNumber()
-	for x := 0 ; x < 1000 ; x++{ // if u need a thousand guesses .....
+	for x := 0; x < 1000; x++ { // if u need a thousand guesses .....
 		theGuess := userInput()
 		if theGuess < theNumber {
 			fmt.Printf("%d is too low\n", theGuess)
