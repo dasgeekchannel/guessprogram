@@ -1,14 +1,17 @@
 #!/usr/bin/python3
 import random
 
-def intro ():
+highNumber = 100
+
+
+def intro():
     print('------------------------------------')
     print('         Guess The Number Game')
     print('------------------------------------')
-    print('Guess a number between 0 and 100:')
+    print('Guess a number between 0 and '+str(highNumber)+':')
 
 
-the_number = random.randint(0, 100)
+the_number = random.randint(0, highNumber)
 intro()
 score = 0
 while True:

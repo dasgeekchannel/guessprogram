@@ -8,8 +8,12 @@ import (
 	"strconv"
 )
 
+var (
+	highNumber int64 = 100
+)
+
 func randomNumber() int64 {
-	res, _ := rand.Int(rand.Reader, big.NewInt(100))
+	res, _ := rand.Int(rand.Reader, big.NewInt(highNumber))
 	return res.Int64()
 
 }
@@ -18,7 +22,7 @@ func intro() {
 	fmt.Println("------------------------------------")
 	fmt.Println("       Guess The Number Game        ")
 	fmt.Println("------------------------------------")
-	fmt.Println("Guess a number between 0 and 100:")
+	fmt.Printf("Guess a number between 0 and %d:\n", highNumber)
 }
 
 func userInput() int64 {
@@ -32,7 +36,7 @@ func userInput() int64 {
 func main() {
 	intro()
 	theNumber := randomNumber()
-	for x := 0; x < 1000; x++ { // if u need a thousand guesses .....
+	for x := 0; x < int(highNumber); x++ {
 		theGuess := userInput()
 		if theGuess < theNumber {
 			fmt.Printf("%d is too low\n", theGuess)
@@ -45,5 +49,4 @@ func main() {
 			os.Exit(0)
 		}
 	}
-
 }
