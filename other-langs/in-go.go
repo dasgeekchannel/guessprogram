@@ -36,7 +36,7 @@ func userInput() int64 {
 func main() {
 	intro()
 	theNumber := randomNumber()
-	for x := 0; x < 1000; x++ { // if u need a thousand guesses .....
+	for x := 0; x < int(highNumber); x++ {
 		theGuess := userInput()
 		if theGuess < theNumber {
 			fmt.Printf("%d is too low\n", theGuess)

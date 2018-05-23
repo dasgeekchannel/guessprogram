@@ -2,17 +2,19 @@
 #include <stdio.h>
 #include <time.h>
 
+const int highNumber = 1000;
+
 int randomNumber(void) {
     time_t t;
     srand((unsigned) time(&t));
-    return rand() % 100;
+    return rand() % highNumber;
 }
 
 void intro(void) {
     printf("------------------------------------\n");
     printf("       Guess The Number Game        \n");
     printf("------------------------------------\n");
-    printf("Guess a number between 0 and 100:\n");
+    printf("Guess a number between 0 and %d:\n", highNumber);
 }
 
 int userInput(void) {
@@ -24,7 +26,7 @@ int userInput(void) {
 int main(void) {
     intro();
     int theNumber = randomNumber();
-    for ( int x = 0 ; x < 1000 ; x++ ) { // if u need a thousand guesses .....
+    for ( int x = 0 ; x < highNumber ; x++ ) { // if u need a thousand guesses .....
         int theGuess = userInput();
         if ( theGuess < theNumber ) {
             printf("%d is too low\n", theGuess);
