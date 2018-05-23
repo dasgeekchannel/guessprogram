@@ -1,0 +1,23 @@
+name: number-guess
+version: git
+summary: number-guess
+description: |
+  python3 number guessing game
+
+grade: stable
+confinement: strict
+
+apps:
+  number-guess:
+    command: python3 $SNAP/bin/number-guess.py
+
+parts:
+  number-guess:
+    source: https://github.com/dasgeekchannel/guessprogram
+    source-type: git
+    plugin: python
+    python-version: python3
+  publish:
+    plugin: copy
+    files:
+      ./number-guess.py: bin/number-guess.py
